@@ -2,19 +2,72 @@ import 'dart:io';
 import 'dart:math';
 
 
+
 void main(List<String> arguments) {
+  
+  print('Choose the service '
+      '\nEven Or Odd number : 1'
+      '\nGrade Calculator : 2'
+      '\nGuess the Number Game : 3'
+      '\nLeap Year Checker :4');
+  int choice=int.parse(stdin.readLineSync()!);
 
-// while(true) {
-//   print('Enter the number');
-//   String? input = stdin.readLineSync();
-//
-//   int number = int.parse(input!);
-//   evenOrOdd(number);
-// }
+  switch(choice){
+    case 2: gradeCalculator();
+    break;
+    case 3: guessGame();
+    break;
+    case 4: leapYear();
+    break;
+    case 1: while(true) {
+      print('Enter the number to chick');
+      String? input = stdin.readLineSync();
 
-  // gradeCalculator();
+      int number = int.parse(input!);
+      evenOrOdd(number);
+    }
 
-  guessGame();
+
+  }
+
+
+
+
+
+
+
+}
+
+void leapYear() {
+  while(true){
+    print('Enter the year');
+    int year=int.parse(stdin.readLineSync()!);
+    if(year%4==0&&year<100) {
+      print('Leap Year');
+    }else if(year>99){
+      switch(year){
+        case 100 : print('Not Leap Year');
+        break;
+        case 200 : print('Not Leap Year');
+        break;
+        case 300 : print('Not Leap Year');
+        break;
+        case 500 : print('Not Leap Year');
+        break;
+        default : bigger(year);
+      }
+    } else {
+      print('Not Leap Year');
+    }
+  }
+}
+
+void bigger(int year) {
+  if(year%4==0||year%400==0) {
+    print('Leap Year');
+  } else {
+    print('Not Leap Year');
+  }
 }
 
 void guessGame() {
