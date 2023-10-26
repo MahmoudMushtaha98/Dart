@@ -9,7 +9,9 @@ void main(List<String> arguments) {
       '\nEven Or Odd number : 1'
       '\nGrade Calculator : 2'
       '\nGuess the Number Game : 3'
-      '\nLeap Year Checker :4');
+      '\nLeap Year Checker :4'
+      '\nSimple Calculator : 5'
+  );
   int choice=int.parse(stdin.readLineSync()!);
 
   switch(choice){
@@ -19,6 +21,8 @@ void main(List<String> arguments) {
     break;
     case 4: leapYear();
     break;
+    case 5: simpleCalculator();
+        break;
     case 1: while(true) {
       print('Enter the number to chick');
       String? input = stdin.readLineSync();
@@ -36,6 +40,29 @@ void main(List<String> arguments) {
 
 
 
+}
+
+void simpleCalculator() {
+  while(true){
+    print('Enter first number');
+    int first = int.parse(stdin.readLineSync()!);
+    print('Enter the operator');
+    String operator = stdin.readLineSync()!;
+    print('Enter the second number');
+    int second = int.parse(stdin.readLineSync()!);
+
+    switch(operator){
+      case '+' : print('result = ${first +second}');
+      break;
+      case '-' : print('result = ${first - second}');
+      break;
+      case '*' : print('result = ${first *second}');
+      break;
+      case '/' : print('result = ${first /second}');
+      break;
+      default : print('Enter correct statement');
+    }
+  }
 }
 
 void leapYear() {
@@ -151,3 +178,5 @@ void evenOrOdd(int number) {
     print("$number is Odd");
   }
 }
+
+
