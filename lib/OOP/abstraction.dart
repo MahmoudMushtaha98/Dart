@@ -1,10 +1,9 @@
-// تعريف واجهة (أو عقدة) تحدد الواجهة للكائنات
+
 abstract class Animal {
   void makeSound();
   void eat();
 }
 
-// تعريف كلاس ينفذ الواجهة (الواجهة) Animal
 class Dog implements Animal {
   @override
   void makeSound() {
@@ -30,7 +29,6 @@ class Cat implements Animal {
 }
 
 void main() {
-  // إنشاء كائنات من الكلاسات واستخدامها بشكل تجريدي
   Animal myDog = Dog();
   Animal myCat = Cat();
 
@@ -39,4 +37,5 @@ void main() {
 
   myCat.makeSound();
   myCat.eat();
+
 }

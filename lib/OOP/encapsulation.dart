@@ -1,18 +1,18 @@
 class Employee {
-  String _employeeId;   // متغير خاص
-  String _name;         // متغير خاص
-  double _salary;       // متغير خاص
+  String _employeeId;
+  String _name;
+  double _salary;
 
   Employee(this._employeeId, this._name, this._salary);
 
-  // دالة لعرض معلومات الموظف
+
   void displayInfo() {
     print("رقم الموظف: $_employeeId");
     print("الاسم: $_name");
     print("الراتب: \$$_salary");
   }
 
-  // دالة لزيادة الراتب
+
   void raiseSalary(double amount) {
     if (amount > 0) {
       _salary += amount;
@@ -28,4 +28,5 @@ void main() {
   employee.displayInfo();
   employee.raiseSalary(10000.0);
   employee.displayInfo();
+
 }
