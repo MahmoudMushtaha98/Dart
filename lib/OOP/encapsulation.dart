@@ -1,32 +1,28 @@
-class Employee {
-  String _employeeId;
-  String _name;
-  double _salary;
+class Car{
 
-  Employee(this._employeeId, this._name, this._salary);
+  String _carType;
+  String _carModel;
+  double _carPrice;
 
+  Car(this._carType, this._carModel, this._carPrice);
 
-  void displayInfo() {
-    print("رقم الموظف: $_employeeId");
-    print("الاسم: $_name");
-    print("الراتب: \$$_salary");
+  String get carType => _carType;
+
+  set carType(String value) {
+    _carType = value;
+  }
+
+  String get carModel => _carModel;
+
+  set carModel(String value) {
+    _carModel = value;
   }
 
 
-  void raiseSalary(double amount) {
-    if (amount > 0) {
-      _salary += amount;
-      print("تم زيادة الراتب إلى \$$_salary");
-    } else {
-      print("الزيادة غير صحيحة.");
-    }
-  }
-}
+  double get carPrice => _carPrice;
 
-void main() {
-  Employee employee = Employee("12345", "أحمد", 50000.0);
-  employee.displayInfo();
-  employee.raiseSalary(10000.0);
-  employee.displayInfo();
+  set carPrice(double value) {
+    _carPrice = value;
+  }
 
 }
