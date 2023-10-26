@@ -5,10 +5,10 @@ void main() {
   }
 
 
-
-  int add(int a, int b) {
-    return a + b;
-  }
+  //
+  // int add(int a, int b) {
+  //   return a + b;
+  // }
 
 
 
@@ -18,6 +18,6 @@ void main() {
 
 
 
-  operate(5, 3, add);        // يتم تمرير الدالة add كمعامل
+  // operate(5, 3, add);        // يتم تمرير الدالة add كمعامل
   operate(5, 3, multiply);   // يتم تمرير الدالة multiply كمعامل
 }
