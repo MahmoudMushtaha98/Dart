@@ -50,6 +50,11 @@ void simpleCalculator() {
     String operator = stdin.readLineSync()!;
     print('Enter the second number');
     int second = int.parse(stdin.readLineSync()!);
+    
+    if(operator.contains('/')&&second==0){
+      print('You cannot divide by 0');
+      continue;
+    }
 
     switch(operator){
       case '+' : print('result = ${first +second}');
